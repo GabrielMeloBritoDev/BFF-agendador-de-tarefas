@@ -6,8 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 
-@FeignClient(name = "ViaEmail", url ="${ViaEmail.url}")
+@FeignClient(name = "emailClient", url = "${notificacao.url}")
 public interface EmailClient {
+    @PostMapping
     void enviarEmail(@RequestBody TarefaDtoOut tarefaDto);
 
 }

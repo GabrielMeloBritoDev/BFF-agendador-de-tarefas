@@ -22,7 +22,9 @@ public class TarefaService {
         return tarefaClient.gravarTarefa(tarefaDto,token);
     }
 
-    public List<TarefaDtoOut> buscarTarefasAgendadasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal, String token) {
+    public List<TarefaDtoOut> buscarTarefasAgendadasPorPeriodo(LocalDateTime dataInicial,
+                                                               LocalDateTime dataFinal,
+                                                               String token) {
         return tarefaClient.buscarTarefasAgendadasPorPeriodo(dataFinal,dataInicial, token);
     }
 
